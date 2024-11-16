@@ -2,7 +2,7 @@
 
 Library for loading cricket [stats](https://stats.espncricinfo.com/ci/engine/stats/index.html) from https://www.espncricinfo.com into pandas dataframes.
 
-# Features
+## Features
 
 1. Career batting stats for all players of a given team in international cricket by format or aggregated.
 2. Career bowling stats for all players of a given team in international cricket by format or aggregated.
@@ -36,3 +36,11 @@ from cricinfo import Team
 
 Cricinfo.retrieve_batting_stats(team=Team.Pakistan, match_format=MatchFormat.Test)
 ```
+
+## Code Quality
+Run test and lint commands from the root of this repo.
+
+- **Testing:** via pytest: `pytest`
+- **Linting:** via ruff: `ruff check .`
+
+[![Coverage Status](coverage.svg)](https://github.com/aaraza/cricinfo)
