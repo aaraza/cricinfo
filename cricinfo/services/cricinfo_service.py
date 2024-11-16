@@ -24,12 +24,14 @@ class CricinfoService:
 
     @staticmethod
     def _construct_query_parameters(team: Team, match_format: MatchFormat, stats_type: StatType) -> dict:
-        return {
-            RequestHelper.TEAM_PARAMETER.value : team.value,
+        params = {
             RequestHelper.MATCH_FORMAT_PARAMETER.value : match_format.value,
             RequestHelper.TYPE_PARAMETER.value  : stats_type.value,
             RequestHelper.TEMPLATE_PARAMETER.value : RequestHelper.TEMPLATE_VALUE.value 
         }
+        if team is not None:
+            params[RequestHelper.TEAM_PARAMETER.value] = team.value
+        return params
     
     @staticmethod
     def _parse_page(params: dict, page: int, dataframes: list[pd.DataFrame]):
@@ -41,7 +43,7 @@ class CricinfoService:
     
     @staticmethod
     def _validate_request(team, match_format, stats_type):
-        if not isinstance(team, Team):
+        if team is not None and not isinstance(team, Team):
             raise TypeError(f"Invalid type for team. Expected {Team.__name__}, got {type(team).__name__} instead.")
         
         if not isinstance(match_format, MatchFormat):

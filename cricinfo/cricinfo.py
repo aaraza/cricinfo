@@ -13,8 +13,8 @@ class Cricinfo:
         """
         Retrieve the batting statistics for all players in international cricket.
 
-        :param team: The team for whose player's statistics will be retrieved. :class:`Team`.
-        :type team: Team
+        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
+        :type team: Team, None
 
         :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
         :type match_format: MatchFormat
@@ -28,8 +28,8 @@ class Cricinfo:
         """
         Retrieve the bowling statistics for all players in international cricket.
 
-        :param team: The team for whose player's statistics will be retrieved. :class:`Team`.
-        :type team: Team
+        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
+        :type team: Team, None
 
         :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
         :type match_format: MatchFormat
@@ -43,8 +43,8 @@ class Cricinfo:
         """
         Retrieve the fielding statistics for all players in international cricket.
 
-        :param team: The team for whose player's statistics will be retrieved. :class:`Team`.
-        :type team: Team
+        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
+        :type team: Team, None
 
         :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
         :type match_format: MatchFormat
@@ -58,8 +58,8 @@ class Cricinfo:
         """
         Retrieve the all-round statistics for all players in international cricket.
 
-        :param team: The team for whose player's statistics will be retrieved. :class:`Team`.
-        :type team: Team
+        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
+        :type team: Team, None
 
         :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
         :type match_format: MatchFormat
@@ -73,8 +73,8 @@ class Cricinfo:
         """
         Retrieve the partnership statistics for all partnerships for a given team in international cricket.
 
-        :param team: The team for whose player's statistics will be retrieved. :class:`Team`.
-        :type team: Team
+        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
+        :type team: Team, None
 
         :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
         :type match_format: MatchFormat
@@ -88,8 +88,8 @@ class Cricinfo:
         """
         Retrieve team statistics for a given team in international cricket.
 
-        :param team: The team for which the statistics will be retrieved. :class:`Team`.
-        :type team: Team
+       :param team: Filter stats by team. Set to None to retrieve stats for all teams.
+        :type team: Team, None
 
         :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
         :type match_format: MatchFormat
@@ -103,8 +103,8 @@ class Cricinfo:
         """
         Retrieve aggregated team statistics for a given team in international cricket.
 
-        :param team: The team for which the statistics will be retrieved. :class:`Team`.
-        :type team: Team
+        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
+        :type team: Team, None
 
         :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
         :type match_format: MatchFormat
