@@ -4,8 +4,9 @@ Library for loading cricket [stats](https://stats.espncricinfo.com/ci/engine/sta
 
 ## Features
 
-1. Career batting stats for all players of a given team in international cricket by format or aggregated.
-2. Career bowling stats for all players of a given team in international cricket by format or aggregated.
+1. Career batting/bowling/fielding/all-round statistics for international cricketers.
+2. Statistics for all partnerships in international cricket for a given team.
+3. Aggregated statitics for teams in international cricket.
 
 ## Teams Supported
 ```
@@ -40,7 +41,13 @@ Cricinfo.retrieve_batting_stats(team=Team.Pakistan, match_format=MatchFormat.Tes
 ## Code Quality
 Run test and lint commands from the root of this repo.
 
-- **Testing:** via pytest: `pytest`
-- **Linting:** via ruff: `ruff check .`
+### Testing
+```
+coverage run -m pytest -v -s
+coverage report -m
+```
+
+### Linting
+`ruff check .`
 
 [![Coverage Status](coverage.svg)](https://github.com/aaraza/cricinfo)

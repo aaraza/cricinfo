@@ -12,7 +12,7 @@ class CricinfoService:
     """
 
     @staticmethod
-    def retrieve_stats(team: Team, match_format: MatchFormat, stats_type: StatType):
+    def retrieve_stats(team: Team, match_format: MatchFormat, stats_type: StatType) -> pd.DataFrame:
         CricinfoService._validate_request(team, match_format, stats_type)
         params = CricinfoService._construct_query_parameters(team=team, match_format=match_format, stats_type=stats_type)
         dataframes = []
