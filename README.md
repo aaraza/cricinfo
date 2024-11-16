@@ -37,5 +37,10 @@ from cricinfo import Team
 Cricinfo.retrieve_batting_stats(team=Team.Pakistan, match_format=MatchFormat.Test)
 ```
 
-## Testing
-Test via pytest: `pytest`.
+## Code Quality
+Run test and lint commands from the root of this repo.
+
+- **Testing:** via pytest: `pytest`
+- **Linting:** via ruff: `ruff check .`
+
+[![Coverage Status](coverage.svg)](https://github.com/aaraza/cricinfo)
