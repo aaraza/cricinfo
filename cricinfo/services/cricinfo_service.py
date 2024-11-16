@@ -13,7 +13,7 @@ class CricinfoService:
 
     @staticmethod
     def retrieve_stats(team: Team, match_format: MatchFormat, stats_type: StatType):
-        CricinfoService._validate_request(team, match_format)
+        CricinfoService._validate_request(team, match_format, stats_type)
         params = CricinfoService._construct_query_parameters(team=team, match_format=match_format, stats_type=stats_type)
         dataframes = []
         tables = CricinfoService._parse_page(params=params, page=1, dataframes=dataframes)
@@ -40,9 +40,12 @@ class CricinfoService:
         return tables
     
     @staticmethod
-    def _validate_request(team, match_format):
+    def _validate_request(team, match_format, stats_type):
         if not isinstance(team, Team):
             raise TypeError(f"Invalid type for team. Expected {Team.__name__}, got {type(team).__name__} instead.")
         
         if not isinstance(match_format, MatchFormat):
-            raise TypeError(f"Invalid type for match format. Expected {MatchFormat.__name__}, got {type(match_format).__name__} instead.")
+            raise TypeError(f"Invalid type for match_format. Expected {MatchFormat.__name__}, got {type(match_format).__name__} instead.")
+        
+        if not isinstance(stats_type, StatType):
+            raise TypeError(f"Invalid type for stats_type. Expected {StatType.__name__}, got {type(stats_type).__name__} instead.")
