@@ -1,5 +1,6 @@
 from .match_format import MatchFormat
-from .services import BattingService
+from .services import CricinfoService
+from .helpers import StatType
 from .team import Team
 
 class Cricinfo:
@@ -20,4 +21,20 @@ class Cricinfo:
 
         :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
         """
-        return BattingService.retrieve_batting_stats(team, match_format)
+        return CricinfoService.retrieve_stats(team, match_format, StatType.BATTING)
+    
+    @staticmethod
+    def retrieve_bowling_stats(team: Team, match_format: MatchFormat):
+        """
+        Retrieve the bowling statistics for all players that have played
+        internationally for a given team.
+
+        :param team: The team for whose player's statistics will be retrieved. :class:`Team`.
+        :type team: Team
+
+        :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
+        :type match_format: MatchFormat
+
+        :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
+        """
+        return CricinfoService.retrieve_stats(team, match_format, StatType.BOWLING)

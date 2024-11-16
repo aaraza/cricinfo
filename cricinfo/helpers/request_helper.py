@@ -9,7 +9,6 @@ class RequestHelper(Enum):
     TEAM_PARAMETER = "team"
     TEMPLATE_PARAMETER = "template"
     TEMPLATE_VALUE = "results"
-    BATTING_TYPE_VALUE = "batting"
     TYPE_PARAMETER = "type"
     MATCH_FORMAT_PARAMETER = "class"
     USER_AGENT_PARAMEATER = "User-Agent"
