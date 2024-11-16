@@ -38,4 +38,4 @@ Cricinfo.retrieve_batting_stats(team=Team.Pakistan, match_format=MatchFormat.Tes
 ```
 
 ## Testing
-Test via pytest: `pytest`
+Test via pytest: `pytest`.
