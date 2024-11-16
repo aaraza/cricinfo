@@ -5,6 +5,7 @@ Library for loading cricket [stats](https://stats.espncricinfo.com/ci/engine/sta
 # Features
 
 1. Career batting stats for all players of a given team in international cricket by format or aggregated.
+2. Career bowling stats for all players of a given team in international cricket by format or aggregated.
 
 ## Teams Supported
 ```

@@ -1,1 +1,1 @@
-from .batting_service import BattingService
+from .cricinfo_service import CricinfoService
