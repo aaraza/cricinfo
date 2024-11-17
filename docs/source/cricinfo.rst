@@ -8,8 +8,6 @@ cricinfo.cricinfo module
    :members:
    :undoc-members:
    :show-inheritance:
-   :noindex:
-
 
 cricinfo.match\_format module
 -----------------------------
