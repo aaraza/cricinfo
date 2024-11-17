@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="cricinfo-stats",
-    version="1.0",
+    version="1.0.1",
     author="Ali Raza",
     author_email="aaraza1995@gmail.com",
     description="Python/Pandas Client for https://www.espncricinfo.com stats",
