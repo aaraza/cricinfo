@@ -1,9 +1,6 @@
 cricinfo package
 ================
 
-Submodules
-----------
-
 cricinfo.cricinfo module
 ------------------------
 
@@ -26,14 +23,6 @@ cricinfo.team module
 --------------------
 
 .. automodule:: cricinfo.team
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: cricinfo
    :members:
    :undoc-members:
    :show-inheritance:
