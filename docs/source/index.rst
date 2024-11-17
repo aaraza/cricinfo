@@ -9,8 +9,8 @@ Welcome to Cricinfo's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   
-   README.md
+
+   README.md 
    cricinfo
 
 Indices and tables

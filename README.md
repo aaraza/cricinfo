@@ -2,6 +2,7 @@
 
 Library for loading cricket [stats](https://stats.espncricinfo.com/ci/engine/stats/index.html) from https://www.espncricinfo.com into pandas dataframes.
 
+- [Documentation](https://cricinfo.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/aaraza/cricinfo)
 - [PyPi](https://pypi.org/project/cricinfo-stats/): `pip install cricinfo-stats`
 
