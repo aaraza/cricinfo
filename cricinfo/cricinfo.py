@@ -13,13 +13,13 @@ class Cricinfo:
         """
         Retrieve the batting statistics for all players in international cricket.
 
-        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
-        :type team: Team, None
+        :param team: Filter stats by team. 
+        :type team: Team, :obj:`None`
 
-        :param match_format: The format for which the statistics will be retrieved.
+        :param match_format: Filter stats by format.
         :type match_format: MatchFormat
 
-        :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
+        :raises TypeError: If Team or MatchFormat do not use the specified type.
         """
         return CricinfoService.retrieve_stats(team, match_format, StatType.BATTING)
     
@@ -28,13 +28,13 @@ class Cricinfo:
         """
         Retrieve the bowling statistics for all players in international cricket.
 
-        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
-        :type team: Team, None
+        :param team: Filter stats by team. 
+        :type team: Team, :obj:`None`
 
-        :param match_format: The format for which the statistics will be retrieved.
+        :param match_format: Filter stats by format.
         :type match_format: MatchFormat
 
-        :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
+        :raises TypeError: If Team or MatchFormat do not use the specified type.
         """
         return CricinfoService.retrieve_stats(team, match_format, StatType.BOWLING)
     
@@ -43,13 +43,13 @@ class Cricinfo:
         """
         Retrieve the fielding statistics for all players in international cricket.
 
-        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
-        :type team: Team, None
+        :param team: Filter stats by team. 
+        :type team: Team, :obj:`None`
 
-        :param match_format: The format for which the statistics will be retrieved.
+        :param match_format: Filter stats by format.
         :type match_format: MatchFormat
 
-        :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
+        :raises TypeError: If Team or MatchFormat do not use the specified type.
         """
         return CricinfoService.retrieve_stats(team, match_format, StatType.FIELDING)
 
@@ -58,13 +58,13 @@ class Cricinfo:
         """
         Retrieve the all-round statistics for all players in international cricket.
 
-        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
-        :type team: Team, None
+        :param team: Filter stats by team. 
+        :type team: Team, :obj:`None`
 
-        :param match_format: The format for which the statistics will be retrieved.
+        :param match_format: Filter stats by format.
         :type match_format: MatchFormat
 
-        :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
+        :raises TypeError: If Team or MatchFormat do not use the specified type.
         """
         return CricinfoService.retrieve_stats(team, match_format, StatType.ALLROUND)
 
@@ -73,13 +73,13 @@ class Cricinfo:
         """
         Retrieve the partnership statistics for all partnerships for a given team in international cricket.
 
-        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
-        :type team: Team, None
+        :param team: Filter stats by team. 
+        :type team: Team, :obj:`None`
 
-        :param match_format: The format for which the statistics will be retrieved.
+        :param match_format: Filter stats by format.
         :type match_format: MatchFormat
 
-        :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
+        :raises TypeError: If Team or MatchFormat do not use the specified type.
         """
         return CricinfoService.retrieve_stats(team, match_format, StatType.PARTNERSHIP)
 
@@ -88,13 +88,13 @@ class Cricinfo:
         """
         Retrieve team statistics for a given team in international cricket.
 
-        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
-        :type team: Team, None
+        :param team: Filter stats by team. 
+        :type team: Team, :obj:`None`
 
-        :param match_format: The format for which the statistics will be retrieved.
+        :param match_format: Filter stats by format.
         :type match_format: MatchFormat
 
-        :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
+        :raises TypeError: If Team or MatchFormat do not use the specified type.
         """
         return CricinfoService.retrieve_stats(team, match_format, StatType.TEAM)
 
@@ -103,12 +103,12 @@ class Cricinfo:
         """
         Retrieve aggregated team statistics for a given team in international cricket.
 
-        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
-        :type team: Team, None
+        :param team: Filter stats by team. 
+        :type team: Team, :obj:`None`
 
-        :param match_format: The format for which the statistics will be retrieved.
+        :param match_format: Filter stats by format.
         :type match_format: MatchFormat
 
-        :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
+        :raises TypeError: If Team or MatchFormat do not use the specified type.
         """
         return CricinfoService.retrieve_stats(team, match_format, StatType.AGGREGATE)   

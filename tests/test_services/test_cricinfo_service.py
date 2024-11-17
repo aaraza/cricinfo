@@ -1,7 +1,9 @@
-from cricinfo.helpers import StatType
-from cricinfo.services import CricinfoService
-from cricinfo import Team
-from cricinfo import MatchFormat
+import sys
+sys.path.append("...")
+from cricinfo.helpers.stat_type import StatType
+from cricinfo.services.cricinfo_service import CricinfoService
+from cricinfo.team import Team
+from cricinfo.match_format import MatchFormat
 import pytest
 
 class TestCricinfoService:

@@ -4,7 +4,7 @@ class Team(Enum):
     """
     Statistics can be filtered by team. 
     
-    For any method where this class is a parameter, it can be pass as None,
+    For any method where this class is a parameter, it can be passed as :obj:`None`,
     bypassing team filtering.
     """
     England = '1'
