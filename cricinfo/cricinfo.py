@@ -1,12 +1,12 @@
 from .match_format import MatchFormat
-from .services import CricinfoService
-from .helpers import StatType
+from .services.cricinfo_service import CricinfoService
+from .helpers.stat_type import StatType
 from .team import Team
 import pandas as pd
 
 class Cricinfo:
     """
-    Library for loading cricket stats from espncricinfo.com info Pandas DataFrames.
+    Loads cricket statistics from ESPN's cricinfo site into Pandas data frames.
     """ 
     @staticmethod
     def retrieve_batting_stats(team: Team, match_format: MatchFormat) -> pd.DataFrame :
@@ -16,7 +16,7 @@ class Cricinfo:
         :param team: Filter stats by team. Set to None to retrieve stats for all teams.
         :type team: Team, None
 
-        :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
+        :param match_format: The format for which the statistics will be retrieved.
         :type match_format: MatchFormat
 
         :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
@@ -31,7 +31,7 @@ class Cricinfo:
         :param team: Filter stats by team. Set to None to retrieve stats for all teams.
         :type team: Team, None
 
-        :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
+        :param match_format: The format for which the statistics will be retrieved.
         :type match_format: MatchFormat
 
         :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
@@ -46,7 +46,7 @@ class Cricinfo:
         :param team: Filter stats by team. Set to None to retrieve stats for all teams.
         :type team: Team, None
 
-        :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
+        :param match_format: The format for which the statistics will be retrieved.
         :type match_format: MatchFormat
 
         :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
@@ -61,7 +61,7 @@ class Cricinfo:
         :param team: Filter stats by team. Set to None to retrieve stats for all teams.
         :type team: Team, None
 
-        :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
+        :param match_format: The format for which the statistics will be retrieved.
         :type match_format: MatchFormat
 
         :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
@@ -76,7 +76,7 @@ class Cricinfo:
         :param team: Filter stats by team. Set to None to retrieve stats for all teams.
         :type team: Team, None
 
-        :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
+        :param match_format: The format for which the statistics will be retrieved.
         :type match_format: MatchFormat
 
         :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
@@ -88,10 +88,10 @@ class Cricinfo:
         """
         Retrieve team statistics for a given team in international cricket.
 
-       :param team: Filter stats by team. Set to None to retrieve stats for all teams.
+        :param team: Filter stats by team. Set to None to retrieve stats for all teams.
         :type team: Team, None
 
-        :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
+        :param match_format: The format for which the statistics will be retrieved.
         :type match_format: MatchFormat
 
         :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
@@ -106,7 +106,7 @@ class Cricinfo:
         :param team: Filter stats by team. Set to None to retrieve stats for all teams.
         :type team: Team, None
 
-        :param match_format: The format for which the statistics will be retrieved. :class:`MatchFormat`.
+        :param match_format: The format for which the statistics will be retrieved.
         :type match_format: MatchFormat
 
         :raises TypeError: If Team or MatchFormat parameters are not of the enum types provided in this library.
