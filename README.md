@@ -61,3 +61,9 @@ cd docs/
 make clean
 make html
 ```
+
+## Packaging
+
+Update version for the library as well as the docs:
+1. `setup.py`
+2. `docs\source\conf.py`
