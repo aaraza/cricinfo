@@ -1,16 +1,12 @@
 import pandas as pd
 import requests
-from ..helpers import DataSanatizer
-from ..helpers import RequestHelper
-from ..helpers import StatType
+from ..helpers.data_sanitizer import DataSanatizer
+from ..helpers.request_helper import RequestHelper
+from ..helpers.stat_type import StatType
 from ..match_format import MatchFormat
 from ..team import Team
 
 class CricinfoService:
-    """
-    For retrieving batting related data from cricinfo
-    """
-
     @staticmethod
     def retrieve_stats(team: Team, match_format: MatchFormat, stats_type: StatType) -> pd.DataFrame:
         CricinfoService._validate_request(team, match_format, stats_type)
