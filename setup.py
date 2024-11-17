@@ -18,6 +18,7 @@ setup(
     python_requires=">=3.7",  # Adjust as needed
     install_requires=[
         "pandas>=2.2.2",
-        "requests>=2.32.3"
+        "requests>=2.32.3",
+        "lxml>=5.2.1"
     ]
 )
