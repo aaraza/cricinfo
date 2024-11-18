@@ -1,6 +1,13 @@
+# Main library requirements
 pandas>=2.2.3
 requests>=2.32.3
 lxml>=5.3.0
+
+# Code Quality
 pytest==8.3.3
 pytest-cov==6.0.0
 ruff==0.7.4
+
+# Packaging
+setuptools==75.5.0
+wheel==0.45.0
