@@ -9,6 +9,14 @@ cricinfo.cricinfo module
    :undoc-members:
    :show-inheritance:
 
+cricinfo.stat\_type module
+--------------------------
+
+.. automodule:: cricinfo.stat_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 cricinfo.match\_format module
 -----------------------------
 

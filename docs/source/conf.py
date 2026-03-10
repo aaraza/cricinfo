@@ -18,7 +18,14 @@ release = '1.0.4'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.autosummary',
+    'sphinx.ext.intersphinx',
+    'myst_parser',
+]
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -26,21 +33,10 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-
-
-extensions = [
-    'sphinx.ext.autodoc',          # Automatically document modules
-    'sphinx.ext.napoleon',         # Support for Google/NumPy style docstrings
-    'sphinx.ext.viewcode',         # Add links to source code
-    'sphinx.ext.autosummary',      # Generate summaries for modules/classes
-    'sphinx.ext.intersphinx',
-    'myst_parser'
-]
-
-html_theme = 'sphinx_rtd_theme'
+# -- Autodoc configuration ---------------------------------------------------
 
 autodoc_default_options = {
     'members': True,
@@ -50,6 +46,8 @@ autodoc_default_options = {
     'inherited-members': True,
     'show-inheritance': True,
 }
+
+# -- Intersphinx configuration -----------------------------------------------
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3', None),
