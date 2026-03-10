@@ -1,18 +1,17 @@
 from enum import Enum
 
+
 class Team(Enum):
+    """Filter statistics by team.
+
+    Pass ``None`` to retrieve stats for all teams.
     """
-    Statistics can be filtered by team. 
-    
-    For any method where this class is a parameter, it can be passed as :obj:`None`,
-    bypassing team filtering.
-    """
-    England = '1'
-    Australia = '2'
-    SouthAfrica = '3'
-    WestIndies = '4'
-    NewZealand = '5'
-    India = '6'
-    Pakistan = '7'
-    SriLanka = '8'
-    Zimbawe = '9'
+    England = "1"
+    Australia = "2"
+    SouthAfrica = "3"
+    WestIndies = "4"
+    NewZealand = "5"
+    India = "6"
+    Pakistan = "7"
+    SriLanka = "8"
+    Zimbabwe = "9"
