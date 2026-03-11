@@ -1,3 +1,5 @@
+from io import StringIO
+
 import pandas as pd
 import requests
 
@@ -76,7 +78,7 @@ class Cricinfo:
         response = requests.get(BASE_URL, headers=HEADERS, params=params)
         response.raise_for_status()
 
-        tables = pd.read_html(response.content)
+        tables = pd.read_html(StringIO(response.text))
         if len(tables) < 3:
             raise ValueError(
                 f"Expected at least 3 tables in response, got {len(tables)}. "
