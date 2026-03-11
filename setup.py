@@ -19,6 +19,7 @@ setup(
     install_requires=[
         "pandas>=2.2.3",
         "requests>=2.32.3",
-        "lxml>=5.3.0"
+        "lxml>=5.3.0",
+        "html5lib>=1.1",
     ]
 )

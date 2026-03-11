@@ -10,7 +10,7 @@ Welcome to Cricinfo's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   README.md 
+   ../../README.md
    cricinfo
 
 Indices and tables
