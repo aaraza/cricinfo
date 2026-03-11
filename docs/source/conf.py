@@ -11,9 +11,9 @@ sys.path.insert(0, os.path.abspath('../../'))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Cricinfo'
-copyright = '2024, Ali Raza'
+copyright = '2026, Ali Raza'
 author = 'Ali Raza'
-release = '1.0.4'
+release = '2.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
