@@ -1,5 +1,6 @@
 from cricinfo import Team
 
+
 class TestTeam:
 
     def test_teams(self):
@@ -12,7 +13,7 @@ class TestTeam:
             "India",
             "Pakistan",
             "SriLanka",
-            "Zimbawe"
+            "Zimbabwe",
         ]
         for team in teams:
             assert team in Team.__members__

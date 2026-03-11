@@ -1,13 +1,14 @@
-from cricinfo import MatchFormat 
+from cricinfo import MatchFormat
 
-class TestMatchFormats:
+
+class TestMatchFormat:
 
     def test_match_formats(self):
-        match_formats = [
+        formats = [
             "Test",
             "ODI",
             "T20I",
-            "International"
+            "International",
         ]
-        for match_format in match_formats:
-            assert match_format in MatchFormat.__members__
+        for fmt in formats:
+            assert fmt in MatchFormat.__members__

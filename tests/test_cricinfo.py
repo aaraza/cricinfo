@@ -1,51 +1,56 @@
-from cricinfo import Cricinfo
-from cricinfo import Team
-from cricinfo import MatchFormat
+from cricinfo import Cricinfo, Team, MatchFormat, StatType
 
-class TestCricInfo:
+
+class TestCricinfo:
 
     def setup_method(self):
         self.team = Team.Pakistan
         self.match_format = MatchFormat.T20I
 
     def test_retrieve_batting_stats(self):
-        df = Cricinfo.retrieve_batting_stats(team=self.team, match_format=self.match_format)
-        assert df is not None, "Expected dataframe returned from Cricinfo service to not be none."
-        assert df.shape[1] == 15, "Expected dataframe for batting stats to have to have 15 columns."
-        assert df.shape[0] > 100, "Expected atleast 100 records returned for sample batting stat retrieval."
+        df = Cricinfo.retrieve_stats(self.team, self.match_format, StatType.BATTING)
+        assert df is not None
+        assert df.shape[1] == 15
+        assert df.shape[0] > 100
 
     def test_retrieve_bowling_stats(self):
-        df = Cricinfo.retrieve_bowling_stats(team=self.team, match_format=self.match_format)
-        assert df is not None, "Expected dataframe returned from Cricinfo service to not be none."
-        assert df.shape[1] == 14, "Expected dataframe for bowling stats to have to have 14 columns."
-        assert df.shape[0] > 100, "Expected atleast 100 records returned for sample bowling stat retrieval."
+        df = Cricinfo.retrieve_stats(self.team, self.match_format, StatType.BOWLING)
+        assert df is not None
+        assert df.shape[1] == 14
+        assert df.shape[0] > 100
 
-    def test_retrive_fielding_stats(self):
-        df = Cricinfo.retrieve_fielding_stats(team=self.team, match_format=self.match_format)
-        assert df is not None, "Expected dataframe returned from Cricinfo service to not be none."
-        assert df.shape[1] == 11, "Expected dataframe for fielding stats to have to have 11 columns."
-        assert df.shape[0] > 100, "Expected atleast 100 records returned for sample fielding stat retrieval."
-    
-    def test_retrive_allround_stats(self):
-        df = Cricinfo.retrieve_allround_stats(team=self.team, match_format=self.match_format)
-        assert df is not None, "Expected dataframe returned from Cricinfo service to not be none."
-        assert df.shape[1] == 14, "Expected dataframe for all-round stats to have to have 14 columns."
-        assert df.shape[0] > 100, "Expected atleast 100 records returned for sample all-round stat retrieval."
+    def test_retrieve_fielding_stats(self):
+        df = Cricinfo.retrieve_stats(self.team, self.match_format, StatType.FIELDING)
+        assert df is not None
+        assert df.shape[1] == 11
+        assert df.shape[0] > 100
+
+    def test_retrieve_allround_stats(self):
+        df = Cricinfo.retrieve_stats(self.team, self.match_format, StatType.ALLROUND)
+        assert df is not None
+        assert df.shape[1] == 14
+        assert df.shape[0] > 100
 
     def test_retrieve_partnership_stats(self):
-        df = Cricinfo.retrieve_partnership_stats(team=self.team, match_format=self.match_format)
-        assert df is not None, "Expected dataframe returned from Cricinfo service to not be none."
-        assert df.shape[1] == 9, "Expected dataframe for partnership stats to have to have 9 columns."
-        assert df.shape[0] > 100, "Expected atleast 100 records returned for sample partnership stat retrieval." 
+        df = Cricinfo.retrieve_stats(self.team, self.match_format, StatType.PARTNERSHIP)
+        assert df is not None
+        assert df.shape[1] == 9
+        assert df.shape[0] > 100
 
     def test_retrieve_team_stats(self):
-        df = Cricinfo.retrieve_team_stats(team=self.team, match_format=self.match_format)
-        assert df is not None, "Expected dataframe returned from Cricinfo service to not be none."
-        assert df.shape[1] == 13, "Expected dataframe for team stats to have to have 13 columns."
-        assert df.shape[0] == 1, "Expected 1 records returned for sample team stat retrieval."
+        df = Cricinfo.retrieve_stats(self.team, self.match_format, StatType.TEAM)
+        assert df is not None
+        assert df.shape[1] == 13
+        assert df.shape[0] == 1
 
     def test_retrieve_aggregate_stats(self):
-        df = Cricinfo.retrieve_aggregate_stats(team=self.team, match_format=self.match_format)
-        assert df is not None, "Expected dataframe returned from Cricinfo service to not be none."
-        assert df.shape[1] == 10, "Expected dataframe for aggregate team stats to have to have 10 columns."
-        assert df.shape[0] == 1, "Expected 1 records returned for sample team stat retrieval."     
+        df = Cricinfo.retrieve_stats(self.team, self.match_format, StatType.AGGREGATE)
+        assert df is not None
+        assert df.shape[1] == 10
+        assert df.shape[0] == 1
+
+    def test_retrieve_stats_without_team(self):
+        df = Cricinfo.retrieve_stats(None, MatchFormat.Test, StatType.TEAM)
+        assert df is not None
+        assert df.shape[1] == 13
+        assert df.shape[0] >= 13
