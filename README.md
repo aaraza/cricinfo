@@ -72,6 +72,9 @@ df = Cricinfo.retrieve_stats(
 | `Team.Pakistan` | Pakistan |
 | `Team.SriLanka` | Sri Lanka |
 | `Team.Zimbabwe` | Zimbabwe |
+| `Team.Bangladesh` | Bangladesh |
+| `Team.Ireland` | Ireland |
+| `Team.Afghanistan` | Afghanistan |
 
 Pass `team=None` to retrieve stats for all teams.
 

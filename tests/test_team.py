@@ -14,6 +14,9 @@ class TestTeam:
             "Pakistan",
             "SriLanka",
             "Zimbabwe",
+            "Bangladesh",
+            "Ireland",
+            "Afghanistan",
         ]
         for team in teams:
             assert team in Team.__members__
