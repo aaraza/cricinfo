@@ -15,3 +15,6 @@ class Team(Enum):
     Pakistan = "7"
     SriLanka = "8"
     Zimbabwe = "9"
+    Bangladesh = "25"
+    Ireland = "29"
+    Afghanistan = "40"
